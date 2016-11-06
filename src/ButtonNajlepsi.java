@@ -9,7 +9,7 @@ import java.util.*;
 
 class ButtonNajlepsi extends JFrame{
 
-    ButtonNajlepsi() {
+    ButtonNajlepsi(){
         
         JFrame jfr = new JFrame("Najlepsze wyniki");
         jfr.setPreferredSize(new Dimension(400, 250));
