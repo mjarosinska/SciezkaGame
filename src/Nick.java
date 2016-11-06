@@ -12,7 +12,12 @@ class Nick extends JFrame {
         JFrame jfr = new JFrame("Nick");
         jfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfr.setSize(400, 300);
+
+        String nick;
+        nick = JOptionPane.showInputDialog("Podaj nick:");
         
+        
+        /*
         JTextField nick = new JTextField(15);
         jfr.add(nick);
         nick.addActionListener(new ActionListener() {
@@ -21,9 +26,7 @@ class Nick extends JFrame {
                 String nick2 = nick.getText();
             }
         });
-
-
-
+        
         JButton button = new JButton("Anuluj");
         jfr.add(button);
         button.getBaselineResizeBehavior();
@@ -33,7 +36,7 @@ class Nick extends JFrame {
                 jfr.setVisible(false);
                 new MyFrame();
             }
-        });
+        });*/
         
         jfr.setVisible(true);
     }

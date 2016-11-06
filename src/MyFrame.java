@@ -4,6 +4,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 class MyFrame extends JFrame
 {
@@ -26,58 +27,60 @@ class MyFrame extends JFrame
         panel.add(label);
         panel.add(Box.createRigidArea(new Dimension(15,15)));
         
-        JButton button1 = new JButton("START");
-        JButton button2 = new JButton("Najlepsi");
-        JButton button3 = new JButton("INFO");
-        JButton button4 = new JButton("EXIT");
+        JButton buttonStart = new JButton("START");
+        JButton buttonNajlepsi = new JButton("Najlepsi");
+        JButton buttonInfo = new JButton("INFO");
+        JButton buttonExit = new JButton("EXIT");
         
-        panel.add(button1);
-        button1.setAlignmentX(panel.CENTER_ALIGNMENT);
+        panel.add(buttonStart);
+        buttonStart.setAlignmentX(panel.CENTER_ALIGNMENT);
         panel.add(Box.createRigidArea(new Dimension(15,15)));
-        button1.setSize(150, 60);
-        button1.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60)); // button.getMinimumSize().height
-        button1.setMinimumSize(getSize());
+        buttonStart.setSize(150, 60);
+        buttonStart.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60)); // button.getMinimumSize().height
+        buttonStart.setMinimumSize(getSize());
         
-        panel.add(button2);
-        button2.setAlignmentX(panel.CENTER_ALIGNMENT);
+        panel.add(buttonNajlepsi);
+        buttonNajlepsi.setAlignmentX(panel.CENTER_ALIGNMENT);
         panel.add(Box.createRigidArea(new Dimension(15,15)));
-        button2.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
-        button2.setMinimumSize(getSize());
+        buttonNajlepsi.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
+        buttonNajlepsi.setMinimumSize(getSize());
         
-        panel.add(button3);
-        button3.setAlignmentX(panel.CENTER_ALIGNMENT);
+        panel.add(buttonInfo);
+        buttonInfo.setAlignmentX(panel.CENTER_ALIGNMENT);
         panel.add(Box.createRigidArea(new Dimension(15,15)));
-        button3.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
-        button3.setMinimumSize(getSize());
+        buttonInfo.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
+        buttonInfo.setMinimumSize(getSize());
         
-        panel.add(button4);
-        button4.setAlignmentX(panel.CENTER_ALIGNMENT);
+        panel.add(buttonExit);
+        buttonExit.setAlignmentX(panel.CENTER_ALIGNMENT);
         panel.add(Box.createRigidArea(new Dimension(15,15)));
         panel.setVisible(true);
-        button4.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
-        button4.setMinimumSize(getSize());
+        buttonExit.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
+        buttonExit.setMinimumSize(getSize());
 
-        button1.addActionListener(new ActionListener() {
+        buttonStart.addActionListener(new ActionListener() {
             //@Override
             public void actionPerformed(ActionEvent ae) {
                 jfr.setVisible(false);
-                new Button1();
+                new ButtonStart();
             }
         });
-        button2.addActionListener(new ActionListener() {
-            //@Override
-            public void actionPerformed(ActionEvent ae) {
-
-            }
-        });
-        button3.addActionListener(new ActionListener() {
+        buttonNajlepsi.addActionListener(new ActionListener() {
             //@Override
             public void actionPerformed(ActionEvent ae) {
                 jfr.setVisible(false);
-                new Button3();
+                new ButtonNajlepsi();                
+                
             }
         });
-        button4.addActionListener(new ActionListener() {
+        buttonInfo.addActionListener(new ActionListener() {
+            //@Override
+            public void actionPerformed(ActionEvent ae) {
+                jfr.setVisible(false);
+                new ButtonInfo();
+            }
+        });
+        buttonExit.addActionListener(new ActionListener() {
             //@Override
             public void actionPerformed(ActionEvent ae) {
                 System.exit(0);

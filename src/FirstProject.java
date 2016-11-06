@@ -11,6 +11,7 @@ public class FirstProject {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 MyFrame myFrame = new MyFrame();
+                //Nick nick = new Nick();
             }
         });
     }

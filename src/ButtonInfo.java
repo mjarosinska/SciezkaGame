@@ -2,35 +2,24 @@
  * Created by MAGDA on 2016-11-05.
  */
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 
-class Button1 extends JFrame{
-
-    Button1() {
-        JFrame jfr = new JFrame("Wybór poziomu");
+class ButtonInfo extends JFrame {
+    ButtonInfo() {
+        JFrame jfr = new JFrame("Informacje o grze");
         jfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jfr.setPreferredSize(new Dimension(400, 200));
-        JLabel label = new JLabel("Wybierz poziom: ");
-        jfr.add(label, BorderLayout.PAGE_START);
+        jfr.setPreferredSize(new Dimension(600, 500));
+
+        JLabel label = new JLabel();
+        label.setText("<html><br> Twórcy: <br><br> Magdalena Jarosińska <br> Wojciech Rogman" +
+                "<br><br> Zasady gry:  ... </html>");
         jfr.add(label);
         
-        String[] levels = { " ", "Łatwy", "Średni", "Hardcorowy" };
-        JComboBox levelsList = new JComboBox(levels);
-        levelsList.setSelectedIndex(0);
-        levelsList.setPreferredSize(new Dimension(200,40));
-        jfr.add(levelsList, BorderLayout.PAGE_START);
-        levelsList.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
-        levelsList.addActionListener(new ActionListener() {
-            //@Override
-            public void actionPerformed(ActionEvent ae) {
-
-            }
-        });
-         
         JButton button = new JButton("Powrót do menu");
-        //jfr.add(button, BorderLayout.PAGE_END);
-        //button.setAlignmentX(jfr.CENTER_ALIGNMENT);
+        jfr.add(button);
+        button.getBaselineResizeBehavior();
         jfr.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -48,8 +37,9 @@ class Button1 extends JFrame{
                 new MyFrame();
             }
         });
-        
+
         jfr.pack();
         jfr.setVisible(true);
+
     }
 }
