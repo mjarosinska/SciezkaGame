@@ -1,9 +1,11 @@
 /**
  * Created by MAGDA on 2016-11-05.
  */
+import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.*;
 
 class ButtonNajlepsi extends JFrame{
 
