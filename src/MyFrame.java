@@ -4,9 +4,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
 
-class MyFrame extends JFrame
+class MyFrame extends JFrame 
 {
     public MyFrame()
     {
@@ -69,10 +68,15 @@ class MyFrame extends JFrame
             //@Override
             public void actionPerformed(ActionEvent ae) {
                 jfr.setVisible(false);
-                new ButtonNajlepsi();                
+                try {
+                   ButtonNajlepsi buuut= new ButtonNajlepsi();
+                }
+                catch(Exception e) {
+                    System.out.println(e.getStackTrace());
+                }   
                 
             }
-        });
+        });        
         buttonInfo.addActionListener(new ActionListener() {
             //@Override
             public void actionPerformed(ActionEvent ae) {

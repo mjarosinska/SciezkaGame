@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class ButtonStart extends JFrame{
+public class ButtonStart extends JFrame{
 
     ButtonStart() {
         JFrame jfr = new JFrame("Wybór poziomu");
